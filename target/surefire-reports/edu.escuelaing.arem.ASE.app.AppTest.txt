@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: edu.escuelaing.arem.ASE.app.AppTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec <<< FAILURE!
+testStdDevTable3(edu.escuelaing.arem.ASE.app.AppTest)  Time elapsed: 0.005 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<625.634> but was:<638.9>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at edu.escuelaing.arem.ASE.app.AppTest.testStdDevTable3(AppTest.java:169)
+
+testStdDevColumn2(edu.escuelaing.arem.ASE.app.AppTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<62.255833> but was:<60.32>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at edu.escuelaing.arem.ASE.app.AppTest.testStdDevColumn2(AppTest.java:129)
+
+testStdDevColumn1(edu.escuelaing.arem.ASE.app.AppTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<572.02686> but was:<572.03>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at edu.escuelaing.arem.ASE.app.AppTest.testStdDevColumn1(AppTest.java:110)
+
