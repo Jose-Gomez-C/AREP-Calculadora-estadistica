@@ -1,15 +1,24 @@
 package edu.escuelaing.arem.ASE.app;
-
+/**
+ * Esta clase es la encargada de unir los Nodos.
+ * @author Jose Luis Gomez Camacho
+ */
 public class Lista {
 	private Nodo cabeza;
 	private Nodo cola;
 	private int length;
 	
-	
+	/**
+	 * Constructor para la lista,
+	 */
 	public Lista() {
 		length=0;
 	}
-	public void add(Float value) {
+	/**
+	 * Método encargado de crear y unir los Nodos.
+	 * @param value El valor a guardar en el Nodo.
+	 */
+	public void add(double value) {
 		Nodo aux;
 		if (length == 0) {
 			cabeza= new Nodo(value, null, length);
@@ -27,12 +36,17 @@ public class Lista {
 			length+=1;
 		}
 	}
-	public Float getValue(int pos)throws ListaException {
+	/**
+	 * Método que se encarga de recorrer los nodos hasta encontrar el buscado.
+	 * @param pos La posición de la lista que desea. 
+	 * @return El valor almacenado en el nodo.
+	 */
+	public double getValue(int pos)throws ListaException {
 		Nodo actual= cabeza;
-		Float valor = null;
+		Double valor = null;
 		for( int x=0; x<=length && valor == null; x+=1) {
 			if (actual.setPos(pos)){
-				valor= actual.getValue();
+				valor= (Double) actual.getValue();
 			}else {
 				actual= actual.getNext();
 			}
@@ -41,6 +55,9 @@ public class Lista {
 		
 		return valor;
 	}
+	/**
+	 * @return La longitud de la lista. 
+	 */
 	public int getLength() {
 		return length;
 	}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="3" name="edu.escuelaing.arem.ASE.app.AppTest" time="0.011" errors="0" skipped="0">
+<testsuite tests="10" failures="0" name="edu.escuelaing.arem.ASE.app.AppTest" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_261\bin"/>
@@ -66,46 +66,13 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testMeanColumn1" time="0.003"/>
-  <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testMeanColumn2" time="0"/>
-  <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testStdDevTable3" time="0.005">
-    <failure message="expected:&lt;625.634&gt; but was:&lt;638.9&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;625.634&gt; but was:&lt;638.9&gt;
-	at junit.framework.Assert.fail(Assert.java:47)
-	at junit.framework.Assert.failNotEquals(Assert.java:282)
-	at junit.framework.Assert.assertEquals(Assert.java:64)
-	at junit.framework.Assert.assertEquals(Assert.java:71)
-	at edu.escuelaing.arem.ASE.app.AppTest.testStdDevTable3(AppTest.java:169)
-</failure>
-    <system-out>10
-625.634
-10
-</system-out>
-  </testcase>
   <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testMeanTable3" time="0"/>
-  <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testStdDevColumn2" time="0.002">
-    <failure message="expected:&lt;62.255833&gt; but was:&lt;60.32&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;62.255833&gt; but was:&lt;60.32&gt;
-	at junit.framework.Assert.fail(Assert.java:47)
-	at junit.framework.Assert.failNotEquals(Assert.java:282)
-	at junit.framework.Assert.assertEquals(Assert.java:64)
-	at junit.framework.Assert.assertEquals(Assert.java:71)
-	at edu.escuelaing.arem.ASE.app.AppTest.testStdDevColumn2(AppTest.java:129)
-</failure>
-    <system-out>10
-62.255833
-10
-</system-out>
-  </testcase>
-  <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testStdDevColumn1" time="0.001">
-    <failure message="expected:&lt;572.02686&gt; but was:&lt;572.03&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;572.02686&gt; but was:&lt;572.03&gt;
-	at junit.framework.Assert.fail(Assert.java:47)
-	at junit.framework.Assert.failNotEquals(Assert.java:282)
-	at junit.framework.Assert.assertEquals(Assert.java:64)
-	at junit.framework.Assert.assertEquals(Assert.java:71)
-	at edu.escuelaing.arem.ASE.app.AppTest.testStdDevColumn1(AppTest.java:110)
-</failure>
-    <system-out>10
-572.02686
-10
-</system-out>
-  </testcase>
-  <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testList" time="0"/>
+  <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testMean1" time="0"/>
+  <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testMean2" time="0"/>
+  <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testStdDev1" time="0"/>
+  <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testMeanColumn2" time="0"/>
+  <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testStdDevTable3" time="0"/>
+  <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testStdDev2" time="0"/>
+  <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testStdDevColumn1" time="0"/>
+  <testcase classname="edu.escuelaing.arem.ASE.app.AppTest" name="testStdDevColumn2" time="0"/>
 </testsuite>

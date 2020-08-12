@@ -1,7 +1,5 @@
 package edu.escuelaing.arem.ASE.app;
 
-import java.util.ArrayList;
-
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -29,46 +27,20 @@ extends TestCase
 	{
 		return new TestSuite( AppTest.class );
 	}
-
-	/**
-	 * Rigourous Test :-)
-	 */
-	public void testList() {
-		ArrayList<Float>prueba= new ArrayList<Float>();
-		prueba.add((float) 10);
-		prueba.add((float) 15);
-		prueba.add((float) 30);
-		prueba.add((float) 100);
-		Lista lista= new Lista();
-		lista.add((float) 10);
-		lista.add((float) 15);
-		lista.add((float) 30);
-		lista.add((float) 100);
-		Float valor=null;
-		for (int x=0;x<4;x+=1) {
-			try {
-				valor = lista.getValue(x);
-			} catch (ListaException e) {
-				assertTrue(false);
-			}
-			
-			assertEquals(valor, prueba.get(x));
-		}
-	}
 	public void testMeanColumn1() {
 		App datos = new App();
-		datos.addNumber((float) 160);
-		datos.addNumber((float) 591);
-		datos.addNumber((float) 114);
-		datos.addNumber((float) 229);
-		datos.addNumber((float) 230);
-		datos.addNumber((float) 270);
-		datos.addNumber((float) 128);
-		datos.addNumber((float) 1657);
-		datos.addNumber((float) 624);
-		datos.addNumber((float) 1503);
+		datos.addNumber((double) 160);
+		datos.addNumber((double) 591);
+		datos.addNumber((double) 114);
+		datos.addNumber((double) 229);
+		datos.addNumber((double) 230);
+		datos.addNumber((double) 270);
+		datos.addNumber((double) 128);
+		datos.addNumber((double) 1657);
+		datos.addNumber((double) 624);
+		datos.addNumber((double) 1503);
 		try {
-			assertEquals(datos.mean(), (float)550.6);
+			assertEquals(datos.mean(), (double)550.6);
 		} catch (ListaException e) {
 			assertTrue(false);
 		}
@@ -76,18 +48,76 @@ extends TestCase
 	}
 	public void testMeanColumn2() {
 		App datos = new App();
-		datos.addNumber((float) 15);
-		datos.addNumber((float) 69.9);
-		datos.addNumber((float) 6.5);
-		datos.addNumber((float) 28.4);
-		datos.addNumber((float) 65.9);
-		datos.addNumber((float) 19.4);
-		datos.addNumber((float) 198.7);
-		datos.addNumber((float) 38.8);
-		datos.addNumber((float) 138.2);
-		datos.addNumber((float) 22.4);
+		datos.addNumber((double) 15);
+		datos.addNumber((double) 69.9);
+		datos.addNumber((double) 6.5);
+		datos.addNumber((double) 28.4);
+		datos.addNumber((double) 65.9);
+		datos.addNumber((double) 19.4);
+		datos.addNumber((double) 198.7);
+		datos.addNumber((double) 38.8);
+		datos.addNumber((double) 138.2);
+		datos.addNumber((double) 22.4);
 		try {
-			assertEquals(datos.mean(), (float)60.32);
+			assertEquals(datos.mean(), (double)60.32);
+		} catch (ListaException e) {
+			assertTrue(false);
+		}
+		
+	}
+
+	public void testMeanTable3() {
+		App datos = new App();
+		datos.addNumber((double) 186);
+		datos.addNumber((double) 699);
+		datos.addNumber((double) 132);
+		datos.addNumber((double) 272);
+		datos.addNumber((double) 331);
+		datos.addNumber((double) 199);
+		datos.addNumber((double) 1890);
+		datos.addNumber((double) 788);
+		datos.addNumber((double) 1601);
+		datos.addNumber((double) 291);
+		try {
+			assertEquals(datos.mean(), (double)638.9);
+		} catch (ListaException e) {
+			assertTrue(false);
+		}
+		
+	}
+	public void testMean1() {
+		App datos = new App();
+		datos.addNumber((double) 150);
+		datos.addNumber((double) 160);
+		datos.addNumber((double) 161);
+		datos.addNumber((double) 5);
+		datos.addNumber((double) 1);
+		datos.addNumber((double) 51);
+		datos.addNumber((double) 5132);
+		datos.addNumber((double) 15);
+		datos.addNumber((double) 15);
+		datos.addNumber((double) 151);
+		try {
+			assertEquals(datos.mean(), (double)584.1);
+		} catch (ListaException e) {
+			assertTrue(false);
+		}
+		
+	}
+	public void testMean2() {
+		App datos = new App();
+		datos.addNumber((double) 51);
+		datos.addNumber((double) 5);
+		datos.addNumber((double) 15);
+		datos.addNumber((double) 48);
+		datos.addNumber((double) 79);
+		datos.addNumber((double) 5425);
+		datos.addNumber((double) 8);
+		datos.addNumber((double) 45);
+		datos.addNumber((double) 18);
+		datos.addNumber((double) 4);
+		try {
+			assertEquals(datos.mean(), (double)569.8);
 		} catch (ListaException e) {
 			assertTrue(false);
 		}
@@ -95,58 +125,36 @@ extends TestCase
 	}
 	public void testStdDevColumn1() {
 		App datos = new App();
-		datos.addNumber((float) 160);
-		datos.addNumber((float) 591);
-		datos.addNumber((float) 114);
-		datos.addNumber((float) 229);
-		datos.addNumber((float) 230);
-		datos.addNumber((float) 270);
-		datos.addNumber((float) 128);
-		datos.addNumber((float) 1657);
-		datos.addNumber((float) 624);
-		datos.addNumber((float) 1503);
+		datos.addNumber((double) 160);
+		datos.addNumber((double) 591);
+		datos.addNumber((double) 114);
+		datos.addNumber((double) 229);
+		datos.addNumber((double) 230);
+		datos.addNumber((double) 270);
+		datos.addNumber((double) 128);
+		datos.addNumber((double) 1657);
+		datos.addNumber((double) 624);
+		datos.addNumber((double) 1503);
 		try {
-			System.out.println(datos.stddev());
-			assertEquals(datos.stddev(), (float)572.03);
+			assertEquals(datos.stddev(), (double)572.03);
 		} catch (ListaException e) {
 			assertTrue(false);
 		}
 	}
 	public void testStdDevColumn2() {
 		App datos = new App();
-		datos.addNumber((float) 15);
-		datos.addNumber((float) 69.9);
-		datos.addNumber((float) 6.5);
-		datos.addNumber((float) 28.4);
-		datos.addNumber((float) 65.9);
-		datos.addNumber((float) 19.4);
-		datos.addNumber((float) 198.7);
-		datos.addNumber((float) 38.8);
-		datos.addNumber((float) 138.2);
-		datos.addNumber((float) 22.4);
+		datos.addNumber((double) 15);
+		datos.addNumber((double) 69.9);
+		datos.addNumber((double) 6.5);
+		datos.addNumber((double) 28.4);
+		datos.addNumber((double) 65.9);
+		datos.addNumber((double) 19.4);
+		datos.addNumber((double) 198.7);
+		datos.addNumber((double) 38.8);
+		datos.addNumber((double) 138.2);
+		datos.addNumber((double) 22.4);
 		try {
-			System.out.println(datos.stddev());
-			assertEquals(datos.stddev(), (float)60.32);
-		} catch (ListaException e) {
-			assertTrue(false);
-		}
-		
-	}
-	public void testMeanTable3() {
-		App datos = new App();
-		datos.addNumber((float) 186);
-		datos.addNumber((float) 699);
-		datos.addNumber((float) 132);
-		datos.addNumber((float) 272);
-		datos.addNumber((float) 331);
-		datos.addNumber((float) 199);
-		datos.addNumber((float) 1890);
-		datos.addNumber((float) 788);
-		datos.addNumber((float) 1601);
-		datos.addNumber((float) 291);
-		try {
-			System.out.println(datos.stddev());
-			assertEquals(datos.mean(), (float)638.9);
+			assertEquals(datos.stddev(), (double)62.26);
 		} catch (ListaException e) {
 			assertTrue(false);
 		}
@@ -154,22 +162,60 @@ extends TestCase
 	}
 	public void testStdDevTable3() {
 		App datos = new App();
-		datos.addNumber((float) 186);
-		datos.addNumber((float) 699);
-		datos.addNumber((float) 132);
-		datos.addNumber((float) 272);
-		datos.addNumber((float) 331);
-		datos.addNumber((float) 199);
-		datos.addNumber((float) 1890);
-		datos.addNumber((float) 788);
-		datos.addNumber((float) 1601);
-		datos.addNumber((float) 291);
+		datos.addNumber((double) 186);
+		datos.addNumber((double) 699);
+		datos.addNumber((double) 132);
+		datos.addNumber((double) 272);
+		datos.addNumber((double) 331);
+		datos.addNumber((double) 199);
+		datos.addNumber((double) 1890);
+		datos.addNumber((double) 788);
+		datos.addNumber((double) 1601);
+		datos.addNumber((double) 291);
 		try {
-			System.out.println(datos.stddev());
-			assertEquals(datos.stddev(), (float)638.9);
+			assertEquals(datos.stddev(), (double)625.63);
 		} catch (ListaException e) {
 			assertTrue(false);
 		}
 		
 	}
+	public void testStdDev1() {
+		App datos = new App();
+		datos.addNumber((double) 150);
+		datos.addNumber((double) 160);
+		datos.addNumber((double) 161);
+		datos.addNumber((double) 5);
+		datos.addNumber((double) 1);
+		datos.addNumber((double) 51);
+		datos.addNumber((double) 5132);
+		datos.addNumber((double) 15);
+		datos.addNumber((double) 15);
+		datos.addNumber((double) 151);
+		try {
+			assertEquals(datos.stddev(), (double)1599.5);
+		} catch (ListaException e) {
+			assertTrue(false);
+		}
+		
+	}
+	public void testStdDev2() {
+		App datos = new App();
+		datos.addNumber((double) 51);
+		datos.addNumber((double) 5);
+		datos.addNumber((double) 15);
+		datos.addNumber((double) 48);
+		datos.addNumber((double) 79);
+		datos.addNumber((double) 5425);
+		datos.addNumber((double) 8);
+		datos.addNumber((double) 45);
+		datos.addNumber((double) 18);
+		datos.addNumber((double) 4);
+		try {
+			assertEquals(datos.stddev(), (double) 1706.12);
+		} catch (ListaException e) {
+			assertTrue(false);
+		}
+		
+	}
+	
 }
