@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class calculadoraTest 
 extends TestCase
 {
 	/**
@@ -15,7 +15,7 @@ extends TestCase
 	 *
 	 * @param testName name of the test case
 	 */
-	public AppTest( String testName )
+	public calculadoraTest( String testName )
 	{
 		super( testName );
 	}
@@ -25,10 +25,13 @@ extends TestCase
 	 */
 	public static Test suite()
 	{
-		return new TestSuite( AppTest.class );
+		return new TestSuite( calculadoraTest.class );
 	}
+	/**
+	 * prueba del promedio de la tabla uno del pdf.
+	 */
 	public void testMeanColumn1() {
-		App datos = new App();
+		Calculadora datos = new Calculadora();
 		datos.addNumber((double) 160);
 		datos.addNumber((double) 591);
 		datos.addNumber((double) 114);
@@ -46,8 +49,11 @@ extends TestCase
 		}
 		
 	}
+	/**
+	 * prueba del promedio de la tabla uno del pdf.
+	 */
 	public void testMeanColumn2() {
-		App datos = new App();
+		Calculadora datos = new Calculadora();
 		datos.addNumber((double) 15);
 		datos.addNumber((double) 69.9);
 		datos.addNumber((double) 6.5);
@@ -65,9 +71,11 @@ extends TestCase
 		}
 		
 	}
-
+	/**
+	 * prueba del promedio de la tabla tres del pdf.
+	 */
 	public void testMeanTable3() {
-		App datos = new App();
+		Calculadora datos = new Calculadora();
 		datos.addNumber((double) 186);
 		datos.addNumber((double) 699);
 		datos.addNumber((double) 132);
@@ -85,8 +93,11 @@ extends TestCase
 		}
 		
 	}
+	/**
+	 * Prueba creada por el autor para comprobar el promedio.
+	 */
 	public void testMean1() {
-		App datos = new App();
+		Calculadora datos = new Calculadora();
 		datos.addNumber((double) 150);
 		datos.addNumber((double) 160);
 		datos.addNumber((double) 161);
@@ -104,8 +115,11 @@ extends TestCase
 		}
 		
 	}
+	/**
+	 * Prueba creada por el autor para comprobar el promedio.
+	 */
 	public void testMean2() {
-		App datos = new App();
+		Calculadora datos = new Calculadora();
 		datos.addNumber((double) 51);
 		datos.addNumber((double) 5);
 		datos.addNumber((double) 15);
@@ -123,8 +137,11 @@ extends TestCase
 		}
 		
 	}
+	/**
+	 * prueba de la desviación estándar de la tabla uno del pdf.
+	 */
 	public void testStdDevColumn1() {
-		App datos = new App();
+		Calculadora datos = new Calculadora();
 		datos.addNumber((double) 160);
 		datos.addNumber((double) 591);
 		datos.addNumber((double) 114);
@@ -141,8 +158,11 @@ extends TestCase
 			assertTrue(false);
 		}
 	}
+	/**
+	 * prueba de la desviación estándar de la tabla uno del pdf.
+	 */
 	public void testStdDevColumn2() {
-		App datos = new App();
+		Calculadora datos = new Calculadora();
 		datos.addNumber((double) 15);
 		datos.addNumber((double) 69.9);
 		datos.addNumber((double) 6.5);
@@ -160,8 +180,11 @@ extends TestCase
 		}
 		
 	}
+	/**
+	 * prueba de la desviación estándar de la tabla tres del pdf.
+	 */
 	public void testStdDevTable3() {
-		App datos = new App();
+		Calculadora datos = new Calculadora();
 		datos.addNumber((double) 186);
 		datos.addNumber((double) 699);
 		datos.addNumber((double) 132);
@@ -179,8 +202,11 @@ extends TestCase
 		}
 		
 	}
+	/**
+	 * Prueba creada por el autor para comprobar la desviación estándar.
+	 */
 	public void testStdDev1() {
-		App datos = new App();
+		Calculadora datos = new Calculadora();
 		datos.addNumber((double) 150);
 		datos.addNumber((double) 160);
 		datos.addNumber((double) 161);
@@ -198,8 +224,11 @@ extends TestCase
 		}
 		
 	}
+	/**
+	 * Prueba creada por el autor para comprobar la desviación estándar.
+	 */
 	public void testStdDev2() {
-		App datos = new App();
+		Calculadora datos = new Calculadora();
 		datos.addNumber((double) 51);
 		datos.addNumber((double) 5);
 		datos.addNumber((double) 15);
@@ -212,6 +241,19 @@ extends TestCase
 		datos.addNumber((double) 4);
 		try {
 			assertEquals(datos.stddev(), (double) 1706.12);
+		} catch (ListaException e) {
+			assertTrue(false);
+		}
+		
+	}
+	/**
+	 * Prueba creada para probar la lectura de archivos de la calculadora y sus respectivos calculos. 
+	 */
+	public void testLecturaArchivos() {
+		Calculadora calculos= new Calculadora("datos.txt");
+		try {
+			assertEquals(calculos.mean(), (double)550.6);
+			assertEquals(calculos.stddev(), (double)572.03);
 		} catch (ListaException e) {
 			assertTrue(false);
 		}

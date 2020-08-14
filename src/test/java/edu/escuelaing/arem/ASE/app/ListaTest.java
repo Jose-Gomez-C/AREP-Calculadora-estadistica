@@ -26,6 +26,9 @@ extends TestCase
 		{
 			return new TestSuite( ListaTest.class );
 		}
+		/**
+		 * prueba creada para saber si la lista encadenada conoce a todos sus vecinos. 
+		 */
 		public void testList() {
 			ArrayList<Double>prueba= new ArrayList<Double>();
 			prueba.add((double) 10);
@@ -48,6 +51,9 @@ extends TestCase
 				assertEquals(valor, prueba.get(x));
 			}
 		}
+		/**
+		 * prueba creada para saber si el puntero cabeza estaba funcionado
+		 */
 		public void testListCabeza() {
 			Lista lista= new Lista();
 			lista.add((double) 10);
@@ -61,6 +67,9 @@ extends TestCase
 				
 			}
 		}
+		/**
+		 * prueba creada para saber si el puntero cola estaba funcionado
+		 */
 		public void testList2Cola() {
 			Lista lista= new Lista();
 			lista.add((double) 10);
